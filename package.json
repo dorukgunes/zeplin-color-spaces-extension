@@ -1,6 +1,9 @@
 {
   "name": "color-spaces",
   "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/dorukgunes/zeplin-color-spaces-extension"
+  },
   "description": "Generates HEX, CMYK, RGB, HSV, HSL color spaces when you inspect a layer",
   "scripts": {
     "start": "zem start",
@@ -17,7 +20,10 @@
   "zeplin": {
     "displayName": "Color Spaces",
     "platforms": [
-      "web", "android", "ios", "osx"
+      "web",
+      "android",
+      "ios",
+      "osx"
     ],
     "options": [
       {

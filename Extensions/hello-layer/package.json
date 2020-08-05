@@ -1,0 +1,81 @@
+{
+  "name": "color-spaces",
+  "version": "1.0.0",
+  "description": "Generates HEX, CMYK, RGB, HSV, HSL color spaces when you inspect a layer",
+  "scripts": {
+    "start": "zem start",
+    "test": "zem test",
+    "build": "zem build",
+    "clean": "zem clean",
+    "exec": "zem exec",
+    "publish": "zem publish"
+  },
+  "author": {
+    "name": "Doruk",
+    "email": "doruk.gunes@outlook.com"
+  },
+  "zeplin": {
+    "displayName": "Color Spaces",
+    "platforms": [
+      "web", "android", "ios", "osx"
+    ],
+    "options": [
+      {
+        "name": "Display as",
+        "type": "picker",
+        "id": "displayFormat",
+        "options": [
+          {
+            "name": "JSON",
+            "value": "json"
+          },
+          {
+            "name": "Text",
+            "value": "text"
+          }
+        ],
+        "default": "json"
+      },
+      {
+        "name": "HEX",
+        "type": "switch",
+        "id": "hex",
+        "default": true
+      },
+      {
+        "name": "CMYK",
+        "type": "switch",
+        "id": "cmyk",
+        "default": true
+      },
+      {
+        "name": "RGB",
+        "type": "switch",
+        "id": "rgb",
+        "default": true
+      },
+      {
+        "name": "HSV",
+        "type": "switch",
+        "id": "hsv",
+        "default": false
+      },
+      {
+        "name": "HSL",
+        "type": "switch",
+        "id": "hsl",
+        "default": false
+      }
+    ]
+  },
+  "dependencies": {
+    "zem": "^1.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@types/node": "^12.7.11",
+    "@zeplin/eslint-config": "^1.2.2",
+    "ts-loader": "4.0.0",
+    "typescript": "^3.6.3"
+  }
+}

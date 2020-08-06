@@ -1,5 +1,5 @@
 # Color Spaces Extension
-Generates *HEX, CMYK, RGB, HSV, HSL* color spaces when you inspect a layer 🎨You can freely disable color spaces you don't want to see in the extension output.
+Generates *HEX, CMYK, RGB, HSV, HSL* color spaces when you inspect a layer 🎨 You can freely disable color spaces you don't want to see in the extension output.
 
 ## Output
 

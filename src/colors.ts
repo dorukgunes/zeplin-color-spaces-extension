@@ -127,14 +127,14 @@ export class RGBColor implements RGBColorI {
         return new HSLColor(60*(h<0?h+6:h), s*100, l*100)
     }
     private getRGBCode() {
-        return `${this.r} ${this.g} ${this.b}`
+        return `${this.r} ${this.g} ${this.b} ${Math.round(this.a * 100) / 100}`
     }
     displayText(): string {
-        return `rgb: ${this.getRGBCode()}`
+        return `rgba: ${this.getRGBCode()}`
     }
     displayJSON(): object {
         return {
-            rgb: this.getRGBCode()
+            rgba: this.getRGBCode()
         }
     }
 }

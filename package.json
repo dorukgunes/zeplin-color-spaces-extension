@@ -55,9 +55,9 @@
         "default": true
       },
       {
-        "name": "RGB",
+        "name": "RGBA",
         "type": "switch",
-        "id": "rgb",
+        "id": "rgba",
         "default": true
       },
       {

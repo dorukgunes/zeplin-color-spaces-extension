@@ -1,7 +1,7 @@
 export enum ColorSpaceType {
     HEX = "hex",
     CMYK = "cmyk",
-    RGB = "rgb",
+    RGB = "rgba",
     HSL = "hsl",
     HSV = "hsv",
   }

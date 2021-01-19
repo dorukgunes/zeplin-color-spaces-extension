@@ -7,7 +7,7 @@ Sample JSON output:
 ```
 {
   "hex": "#3c3c43",
-  "rgb": "60 60 67",
+  "rgba": "60 60 67 1",
   "cmyk": "10 10 0 74",
   "hsv": "240.0° 10.4 26.3",
   "hsl": "240.0° 5.5 24.9"
@@ -17,7 +17,7 @@ Sample JSON output:
 Sample text output:
 ```
 hex: #3c3c43
-rgb: 60 60 67
+rgba: 60 60 67 1
 cmyk: 10 10 0 74
 hsv: 240.0° 10.4 26.3
 hsl: 240.0° 5.5 24.9

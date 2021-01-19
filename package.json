@@ -4,7 +4,7 @@
   "repository": {
     "url": "https://github.com/dorukgunes/zeplin-color-spaces-extension"
   },
-  "description": "Generates HEX, CMYK, RGB, HSV, HSL color spaces when you inspect a layer",
+  "description": "Generates HEX, CMYK, RGBA, HSV, HSL color spaces when you inspect a layer",
   "scripts": {
     "start": "zem start",
     "test": "zem test",

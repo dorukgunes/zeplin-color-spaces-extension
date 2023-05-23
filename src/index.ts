@@ -24,8 +24,17 @@ function generateColorSpaces(context: Zem.Context, color: Zem.Color): ColorSpace
         colors.push(rgbColor.toHSV())
     }
 
+    const hslColor = rgbColor.toHSL()
     if (context.getOption(ColorSpaceType.HSL)) {
-        colors.push(rgbColor.toHSL())
+        colors.push(hslColor)
+    }
+
+    if (context.getOption(ColorSpaceType.OKLCH)) {
+        colors.push(hslColor.toOKLCH())
+    }
+
+    if (context.getOption(ColorSpaceType.LCH)) {
+        colors.push(hslColor.toLCH())
     }
 
     return colors

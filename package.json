@@ -1,10 +1,10 @@
 {
   "name": "color-spaces",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "repository": {
     "url": "https://github.com/dorukgunes/zeplin-color-spaces-extension"
   },
-  "description": "Generates HEX, CMYK, RGBA, HSV, HSL color spaces when you inspect a layer",
+  "description": "Generates HEX, CMYK, RGBA, HSV, HSL, LCH, OKLCH color spaces when you inspect a layer",
   "scripts": {
     "start": "zem start",
     "test": "zem test",
@@ -71,17 +71,30 @@
         "type": "switch",
         "id": "hsl",
         "default": false
+      },
+      {
+        "name": "OKLCH",
+        "type": "switch",
+        "id": "oklch",
+        "default": false
+      },
+      {
+        "name": "LCH",
+        "type": "switch",
+        "id": "lch",
+        "default": false
       }
     ]
   },
   "dependencies": {
+    "colorjs.io": "^0.4.3",
     "zem": "^1.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
+    "@babel/core": "^7.21.8",
     "@types/node": "^12.7.11",
     "@zeplin/eslint-config": "^1.2.2",
-    "ts-loader": "4.0.0",
-    "typescript": "^3.6.3"
+    "ts-loader": "^4.0.0",
+    "typescript": "^5.0.4"
   }
 }

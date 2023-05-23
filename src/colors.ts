@@ -1,3 +1,7 @@
+// @ts-nocheck
+import Color from "colorjs.io/dist/color.legacy.cjs"
+
+
 export interface ColorSpaceI {
     name?: string,
     displayText(): string,
@@ -30,13 +34,27 @@ interface CMYKColorI extends ColorSpaceI {
 interface HSLColorI extends ColorSpaceI {
     readonly h: number,
     readonly s: number,
-    readonly l: number
+    readonly l: number,
+    toOKLCH(): OKLCHColorI,
+    toLCH(): LCHColorI
 }
 
 interface HSVColorI extends ColorSpaceI {
     readonly h: number,
     readonly s: number,
     readonly v: number
+}
+
+interface OKLCHColorI extends ColorSpaceI {
+    readonly l: number,
+    readonly c: number,
+    readonly h: number
+}
+
+interface LCHColorI extends ColorSpaceI {
+    readonly l: number,
+    readonly c: number,
+    readonly h: number
 }
 
 export class RGBColor implements RGBColorI {
@@ -197,6 +215,16 @@ export class HSLColor implements HSLColorI {
         this.l = l
     }
 
+    toOKLCH(): OKLCHColorI {
+        const oklch = new Color("hsl", [this.h, this.s, this.l]).to("oklch");
+        return new OKLCHColor(oklch.l, oklch.c, oklch.h);
+    }
+
+    toLCH(): LCHColorI {
+        const lch = new Color("hsl", [this.h, this.s, this.l]).to("lch");
+        return new LCHColor(lch.l, lch.c, lch.h);
+    }
+
     private getHSLCode(): string {
         return `${this.h.toFixed(1)}° ${this.s.toFixed(1)} ${this.l.toFixed(1)}`
     }
@@ -231,6 +259,50 @@ export class HSVColor implements HSVColorI {
     displayJSON(): object {
         return {
             hsv: this.getHSVCode()
+        }
+    }
+}
+
+export class OKLCHColor implements OKLCHColorI {
+    l: number    
+    c: number
+    h: number
+    constructor(l: number, c: number, h: number) {
+        this.l = l * 100
+        this.c = c
+        this.h = h
+    }
+    private getOKLCHCode(): string {
+        return `${this.l.toFixed(2)}% ${this.c.toFixed(3)} ${this.h.toFixed(2)}`
+    }
+    displayText(): string {
+        return `oklch: ${this.getOKLCHCode()}`
+    }
+    displayJSON(): object {
+        return {
+            oklch: this.getOKLCHCode()
+        }
+    }
+}
+
+export class LCHColor implements LCHColorI {
+    l: number    
+    c: number
+    h: number
+    constructor(l: number, c: number, h: number) {
+        this.l = l
+        this.c = c
+        this.h = h
+    }
+    private getLCHCode(): string {
+        return `${this.l.toFixed(2)}% ${this.c.toFixed(2)} ${this.h.toFixed(2)}`
+    }
+    displayText(): string {
+        return `lch: ${this.getLCHCode()}`
+    }
+    displayJSON(): object {
+        return {
+            lch: this.getLCHCode()
         }
     }
 }

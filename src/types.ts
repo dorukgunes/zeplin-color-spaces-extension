@@ -4,6 +4,8 @@ export enum ColorSpaceType {
     RGB = "rgba",
     HSL = "hsl",
     HSV = "hsv",
+    OKLCH = "oklch",
+    LCH = "lch",
   }
   
   export enum DisplayType {

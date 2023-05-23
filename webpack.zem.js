@@ -1,9 +1,9 @@
-module.exports = function({ module: { rules, ...module }, ...webpackConfig }) {
+module.exports = function ({ module: { rules, ...module }, ...webpackConfig }) {
   return {
     ...webpackConfig,
-    entry: './src/index.ts',
+    entry: "./src/index.ts",
     resolve: {
-      extensions: [".ts"]
+      extensions: [".ts"],
     },
     module: {
       ...module,
@@ -13,7 +13,7 @@ module.exports = function({ module: { rules, ...module }, ...webpackConfig }) {
           use: "ts-loader",
           exclude: /node_modules/,
         },
-        ...rules,
+        ...rules
       ],
     },
   };

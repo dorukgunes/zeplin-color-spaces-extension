@@ -1,26 +1,30 @@
 # Color Spaces Extension
-Generates *HEX, CMYK, RGBA, HSV, HSL, LCH, OKLCH* color spaces when you inspect a layer. You can freely disable color spaces you don't want to see in the extension output. 🎨
+Generates *HEX, CMYK, RGBA, HSV, HSL, OKLCH, LCH* color spaces when you inspect a layer. You can freely disable color spaces you don't want to see in the extension output. 🎨
 
 ## Output
 
 Sample JSON output:
 ```
 {
-  "hex": "#3c3c43",
-  "rgba": "60 60 67 1",
-  "cmyk": "10 10 0 74",
-  "hsv": "240.0° 10.4 26.3",
-  "hsl": "240.0° 5.5 24.9"
+  "hex": "#2d9cdb",
+  "rgba": "45 156 219 1",
+  "cmyk": "79 29 0 14",
+  "hsv": "201.7° 79.5 85.9",
+  "hsl": "201.7° 70.7 51.8",
+  "oklch": "66.07% 0.134 239.24",
+  "lch": "60.53% 44.16 250.18"
 }
 ```
 
 Sample text output:
 ```
-hex: #3c3c43
-rgba: 60 60 67 1
-cmyk: 10 10 0 74
-hsv: 240.0° 10.4 26.3
-hsl: 240.0° 5.5 24.9
+hex: #2d9cdb
+rgba: 45 156 219 1
+cmyk: 79 29 0 14
+hsv: 201.7° 79.5 85.9
+hsl: 201.7° 70.7 51.8
+oklch: 66.07% 0.134 239.24
+lch: 60.53% 44.16 250.18
 ```
 
 ## TODO
